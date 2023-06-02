@@ -146,6 +146,8 @@ namespace LiveTalkSummarizeTextSample.Models
                         {
                             var sentenceCount = (int)(seqNo * ((double)this.Ratio / 100D));
                             var result = await GetSummarizeAsync(context, sentenceCount);
+
+                            sentenceCount = sentenceCount < 1 ? 1 : sentenceCount > 20 ? 20 : sentenceCount;
                             this.Result = !string.IsNullOrEmpty(result) ? result : this.Result;
 
                             this.Message = $"Summarized {seqNo} -> {sentenceCount}";
