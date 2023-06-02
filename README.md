@@ -5,6 +5,11 @@ LiveTalk から出力した CSV ファイルを読み込んで、 Azure Cognitiv
 ドキュメント要約には、ドキュメント内の重要な文を抽出する「抽出要約」と、主要な情報をドキュメントから生成する「抽象要約」があります。
 今回は、「抽出要約」を実施します。
 
+# 補足
+2023/06/01時点では、Azure Cognitive Services for Language の Document summarization (preview) は、OpenAIによる文章要約ではありません。
+
+Azure OpenAI による文章要約については、別サンプルとして公開を予定しています。
+
 # 事前準備
 1. Azure Cognitive Services for Language の Document summarization (preview) を利用できるように Azure Portal にサインインして設定を行います。そのためには、有効な Azure アカウントにサインイン、または、無料アカウントを作成して Azure Portal にサインインします。
 2. [リソースの作成] の検索機能で「Cognitive Services」を [作成] をクリックします。
